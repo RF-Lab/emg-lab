@@ -1,12 +1,43 @@
 import socket
 from struct import *
 import numpy as np
+from scipy import signal
+
 
 class EmgChannel:
-    cyclic_buf = np.zeros((2048,),dtype=np.float64)
+    cyclic_buf_size = 2048
+    mvc_max = 50000.0 # Maximum voluntary contraction 
+    def __init__(self,fs):
+        self.fs = fs
+        # Полосовой КИХ фильтр с подавлением 50 Гц,
+        # Метод расчета - Оконное взвешивание
+        if self.fs==1000:
+            self.fltFirWnd = signal.firwin( 256, [10,45, 55,  450], pass_zero=False, fs=self.fs )
+            self.fltFirEnv = signal.firwin( 64, [20,], pass_zero=True, fs=1000 )
+        else:
+            print(f'{self.__class__}: Error: unsupported sampling frequency {fs}')
+        #f, h = signal.freqz(fltFirWnd,fs=1000)
+        # fig = go.Figure()
+        # fig.add_scatter(x=f,y=10*np.log10(np.square(np.abs(h))),name='Полосовой КИХ фильтр с подавлением 50 Гц',mode='lines')
+        # update_freqz_layout(fig)
+        # fig.update_layout(title='АЧХ предварительного фильтра')
+        # fig.show()
+        # np.savetxt( 'filter.txt', fltFirWnd )
+        self.cyclic_buf = np.zeros((self.cyclic_buf_size,),dtype=np.float64)
+        self.filt_cyclic_buf = np.zeros((self.cyclic_buf_size,),dtype=np.float64)
+        self.env_cyclic_buf = np.zeros((self.cyclic_buf_size,),dtype=np.float64)
     def on_data_receive(self,data):
+        # Update cyclic buffer
         self.cyclic_buf = np.roll(self.cyclic_buf,-len(data))
         self.cyclic_buf[-len(data):] = data
+        # Update filtered cyclic buffer
+        self.filt_cyclic_buf = np.roll(self.filt_cyclic_buf,-len(data))
+        filt_data = np.convolve( self.fltFirWnd, self.cyclic_buf[-(len(data)+len(self.fltFirWnd)):], 'same' )
+        self.filt_cyclic_buf[-len(data):] = filt_data[-(len(data)+len(self.fltFirWnd)//2):-len(self.fltFirWnd)//2]/self.mvc_max
+        # Update envelope cyclic buffer
+        self.env_cyclic_buf = np.roll(self.env_cyclic_buf,-len(data))
+        filt_data = np.convolve( self.fltFirEnv, np.abs(self.filt_cyclic_buf[-(len(data)+len(self.fltFirEnv)):]), 'same' )
+        self.env_cyclic_buf[-len(data):] = filt_data[-(len(data)+len(self.fltFirEnv)//2):-len(self.fltFirEnv)//2]
         return False
 
 class EmgSource:
@@ -14,7 +45,7 @@ class EmgSource:
     channels = []
     def __init__(self,channels_to_receive):
         for ch in channels_to_receive:
-            self.channels.append( EmgChannel() )
+            self.channels.append( EmgChannel(fs=1000) )
     def connect(self,ip_address):
         print('Error: connect method should be overriden')
         return -1
@@ -29,7 +60,7 @@ class Myocell8(EmgSource):
     TCP_BOARD_SERVER_PORT = 3000
     TRANSPORT_BLOCK_HEADER_SIZE = 16
     PKT_COUNT_OFFSET = 2
-    SAMPLES_PER_TRANSPORT_BLOCK = 64
+    SAMPLES_PER_TRANSPORT_BLOCK = 128
     NUM_CHANNELS = 8
     tcp_packet_size = None
     receivedBuffer = bytes()
