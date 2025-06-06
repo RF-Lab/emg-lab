@@ -2,12 +2,16 @@ import numpy as np
 from emgtools import Myocell8
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+import winsound
 
 # Channel to monitor
 channels = [1,]
 address = '192.168.1.89'
 
-board = Myocell8([0,1,2,3,4])
+gesture_type = 0
+ges_num = 0
+
+board = Myocell8([0,1,])
 fig, ax = plt.subplots()
 lines = []
 for n,channel in enumerate(channels):
@@ -19,7 +23,11 @@ ax.grid(True)
 #ax.legend()
 
 def update(frame):
-    board.receive_data()
+    global ges_num
+    if board.receive_data()>0:
+        board.save_last_muap( gesture_type, ges_num )
+        ges_num += 1
+        winsound.Beep(300, 100)
     max_v = -1E10
     min_v = 1E10
     for n,channel in enumerate(channels):
@@ -42,7 +50,7 @@ def update(frame):
         min_v = min([min_v, data.min()])
 
     #ax.set_ylim(min_v-np.abs(min_v)*0.1, max_v+np.abs(max_v)*0.1)
-    ax.set_ylim([-0.1,0.1])
+    ax.set_ylim([-0.3,0.3])
     ax.set_title(f'Block #{board.block_count}')
     return lines
 

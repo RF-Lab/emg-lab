@@ -6,14 +6,19 @@ from scipy import signal
 
 class EmgChannel:
     cyclic_buf_size = 2048
+    muap_size = 1024
+    spike_width = 50
+    spike_th = 0.05
     mvc_max = 50000.0 # Maximum voluntary contraction 
+    state = 0 # no spike detected
+    pause_sample_count = 0
     def __init__(self,fs):
         self.fs = fs
         # Полосовой КИХ фильтр с подавлением 50 Гц,
         # Метод расчета - Оконное взвешивание
         if self.fs==1000:
             self.fltFirWnd = signal.firwin( 256, [10,45, 55,  450], pass_zero=False, fs=self.fs )
-            self.fltFirEnv = signal.firwin( 64, [20,], pass_zero=True, fs=1000 )
+            self.fltFirEnv = signal.firwin( 128, [20,], pass_zero=True, fs=self.fs )
         else:
             print(f'{self.__class__}: Error: unsupported sampling frequency {fs}')
         #f, h = signal.freqz(fltFirWnd,fs=1000)
@@ -26,6 +31,7 @@ class EmgChannel:
         self.cyclic_buf = np.zeros((self.cyclic_buf_size,),dtype=np.float64)
         self.filt_cyclic_buf = np.zeros((self.cyclic_buf_size,),dtype=np.float64)
         self.env_cyclic_buf = np.zeros((self.cyclic_buf_size,),dtype=np.float64)
+        self.muap_buf = np.zeros((self.muap_size,),dtype=np.float64)
     def on_data_receive(self,data):
         # Update cyclic buffer
         self.cyclic_buf = np.roll(self.cyclic_buf,-len(data))
@@ -38,6 +44,19 @@ class EmgChannel:
         self.env_cyclic_buf = np.roll(self.env_cyclic_buf,-len(data))
         filt_data = np.convolve( self.fltFirEnv, np.abs(self.filt_cyclic_buf[-(len(data)+len(self.fltFirEnv)):]), 'same' )
         self.env_cyclic_buf[-len(data):] = filt_data[-(len(data)+len(self.fltFirEnv)//2):-len(self.fltFirEnv)//2]
+        if self.pause_sample_count>0:
+            self.pause_sample_count -= len(data)
+            if self.pause_sample_count<0:
+                self.pause_sample_count = 0
+        else:
+            # Muap detection
+            det_area = self.env_cyclic_buf[-self.muap_size:]
+            if np.count_nonzero(det_area[self.muap_size//2-self.spike_width//2:self.muap_size//2+self.spike_width//2]>self.spike_th)>self.spike_width//2: #np.all(det_area[self.muap_size//2-self.spike_width//2:self.muap_size//2+self.spike_width//2]>self.spike_th):
+                if np.all(det_area[:self.spike_width]<self.spike_th):
+                    if np.all(det_area[-self.spike_width:]<self.spike_th):
+                        self.muap_buf = self.filt_cyclic_buf[-self.muap_size:]
+                        self.pause_sample_count = 1024
+                        return True
         return False
 
 class EmgSource:
@@ -82,6 +101,8 @@ class Myocell8(EmgSource):
             return False
         print(f'{self.__class__}: Connected to {server_address}')
         return True
+    def save_last_muap(self,ges_type,ges_num):
+        np.savetxt( f'./gestures/{ges_type:1d}/p_{ges_type:1d}_{ges_num}.txt', self.channels[1].muap_buf )
     def receive_data(self):
         self.num_channels_triggered = 0
         if len(self.receivedBuffer)>=self.tcp_packet_size*2:
