@@ -442,6 +442,7 @@
       "single_global_label": "ignore",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
+      "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"
@@ -610,10 +611,6 @@
     [
       "1fb257a1-4b3b-418e-bb46-683d94c5ed44",
       "cpu_wroom_esp32"
-    ],
-    [
-      "68d5f31f-ae3e-4b0c-9a19-0dd24ead5b66",
-      "usb"
     ],
     [
       "e36bfe9c-db3d-4e13-afda-f7f295377ecb",

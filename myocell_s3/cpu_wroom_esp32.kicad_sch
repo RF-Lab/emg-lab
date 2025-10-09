@@ -5,8 +5,8 @@
 	(uuid "2f73fc87-77b1-44fe-8ecf-e04f8a818d98")
 	(paper "A4")
 	(title_block
-		(title "ESP32 CPU")
-		(date "2024-10-17")
+		(title "ESP32-S3 CPU")
+		(date "2025-10-10")
 		(company "MIREA")
 	)
 	(lib_symbols
@@ -1896,16 +1896,6 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 77.47) (xy 149.86 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "128ec4e5-c6e5-4bd7-86ac-9c659820e983")
-	)
-	(wire
-		(pts
 			(xy 226.06 38.1) (xy 233.68 38.1)
 		)
 		(stroke
@@ -1916,33 +1906,13 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 85.09) (xy 149.86 85.09)
+			(xy 152.4 85.09) (xy 167.64 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1608a391-5438-4ef4-afd3-8dddce20e328")
-	)
-	(wire
-		(pts
-			(xy 134.62 69.85) (xy 149.86 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "177c37fb-bd73-48a4-b928-c7cb487727ec")
-	)
-	(wire
-		(pts
-			(xy 134.62 107.95) (xy 196.85 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "182df056-176e-4369-809b-14d024b1337a")
 	)
 	(wire
 		(pts
@@ -1956,7 +1926,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 100.33) (xy 149.86 100.33)
+			(xy 152.4 100.33) (xy 167.64 100.33)
 		)
 		(stroke
 			(width 0)
@@ -2016,7 +1986,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 102.87) (xy 149.86 102.87)
+			(xy 152.4 102.87) (xy 167.64 102.87)
 		)
 		(stroke
 			(width 0)
@@ -2036,6 +2006,16 @@
 	)
 	(wire
 		(pts
+			(xy 67.31 101.6) (xy 74.93 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40b8c2ea-9da5-4ed6-b29e-6c2d56b32e50")
+	)
+	(wire
+		(pts
 			(xy 38.1 77.47) (xy 44.45 77.47)
 		)
 		(stroke
@@ -2046,23 +2026,23 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 87.63) (xy 139.7 87.63)
+			(xy 120.65 101.6) (xy 125.73 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4403d692-1d14-4948-bec7-ddc82534721d")
+	)
+	(wire
+		(pts
+			(xy 152.4 87.63) (xy 157.48 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "460cee0a-050b-4096-a3eb-30d89ca15eb5")
-	)
-	(wire
-		(pts
-			(xy 134.62 72.39) (xy 149.86 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "47bff6f3-7747-4fb7-be0c-e94117d6de4d")
 	)
 	(wire
 		(pts
@@ -2096,6 +2076,16 @@
 	)
 	(wire
 		(pts
+			(xy 67.31 99.06) (xy 74.93 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61b339e4-0f83-4630-938c-b88481b35ee5")
+	)
+	(wire
+		(pts
 			(xy 106.68 27.94) (xy 119.38 27.94)
 		)
 		(stroke
@@ -2126,7 +2116,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 92.71) (xy 149.86 92.71)
+			(xy 152.4 92.71) (xy 167.64 92.71)
 		)
 		(stroke
 			(width 0)
@@ -2146,7 +2136,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 95.25) (xy 149.86 95.25)
+			(xy 152.4 95.25) (xy 167.64 95.25)
 		)
 		(stroke
 			(width 0)
@@ -2156,7 +2146,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 97.79) (xy 149.86 97.79)
+			(xy 152.4 97.79) (xy 167.64 97.79)
 		)
 		(stroke
 			(width 0)
@@ -2176,7 +2166,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 82.55) (xy 149.86 82.55)
+			(xy 152.4 82.55) (xy 167.64 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2266,7 +2256,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 87.63) (xy 149.86 87.63)
+			(xy 165.1 87.63) (xy 167.64 87.63)
 		)
 		(stroke
 			(width 0)
@@ -2366,7 +2356,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 110.49) (xy 149.86 110.49)
+			(xy 152.4 110.49) (xy 167.64 110.49)
 		)
 		(stroke
 			(width 0)
@@ -2384,6 +2374,28 @@
 		)
 		(uuid "fdd8dca4-33a4-424d-b7d0-32a05aee406f")
 	)
+	(global_label "IO0"
+		(shape input)
+		(at 251.46 33.02 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "230ef5e7-3a95-4768-9698-343e24e23187")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 257.59 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "EN"
 		(shape input)
 		(at 191.77 33.02 0)
@@ -2397,6 +2409,28 @@
 		(uuid "831f54bb-7fa8-4d0a-a260-c071255be7b7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 197.2347 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "IO0"
+		(shape input)
+		(at 125.73 101.6 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a0ef1c05-a9cd-4902-966e-7cb80385013c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 131.86 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2428,14 +2462,14 @@
 			)
 		)
 	)
-	(hierarchical_label "TXD0"
+	(hierarchical_label "D+"
 		(shape input)
-		(at 149.86 69.85 0)
+		(at 67.31 101.6 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "084c89f1-233d-4b7b-a66e-9a11086d6c5a")
 	)
@@ -2452,7 +2486,7 @@
 	)
 	(hierarchical_label "gpio22_pwdn"
 		(shape input)
-		(at 149.86 100.33 0)
+		(at 167.64 100.33 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2463,7 +2497,7 @@
 	)
 	(hierarchical_label "gpio4"
 		(shape input)
-		(at 149.86 82.55 0)
+		(at 167.64 82.55 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2474,7 +2508,7 @@
 	)
 	(hierarchical_label "gpio27"
 		(shape input)
-		(at 149.86 110.49 0)
+		(at 167.64 110.49 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2485,7 +2519,7 @@
 	)
 	(hierarchical_label "gpio19_vspi_miso"
 		(shape input)
-		(at 149.86 95.25 0)
+		(at 167.64 95.25 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2507,7 +2541,7 @@
 	)
 	(hierarchical_label "gpio21_start"
 		(shape input)
-		(at 149.86 97.79 0)
+		(at 167.64 97.79 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2527,20 +2561,20 @@
 		)
 		(uuid "6ad56eb0-04f3-4ef5-85a4-590c1607efd5")
 	)
-	(hierarchical_label "RXD0"
+	(hierarchical_label "D-"
 		(shape input)
-		(at 149.86 72.39 0)
+		(at 67.31 99.06 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "70e77b82-6ebf-4c1b-9ece-41d25e6fb674")
 	)
 	(hierarchical_label "3.3V"
 		(shape input)
-		(at 149.86 87.63 0)
+		(at 167.64 87.63 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2551,7 +2585,7 @@
 	)
 	(hierarchical_label "gpio5_vspi_ss"
 		(shape input)
-		(at 149.86 85.09 0)
+		(at 167.64 85.09 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2562,7 +2596,7 @@
 	)
 	(hierarchical_label "gpio18_vspi_sck"
 		(shape input)
-		(at 149.86 92.71 0)
+		(at 167.64 92.71 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2582,31 +2616,9 @@
 		)
 		(uuid "c2d7a624-0763-42d5-9409-56317bdf2e16")
 	)
-	(hierarchical_label "IO0"
-		(shape input)
-		(at 149.86 77.47 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d6e81d8a-8992-4757-8ce2-7db9406b3a96")
-	)
-	(hierarchical_label "IO0"
-		(shape input)
-		(at 251.46 33.02 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d7cbfb8a-91b2-4d99-99f6-3714496577e0")
-	)
 	(hierarchical_label "gpio23_vspi_mosi"
 		(shape input)
-		(at 149.86 102.87 0)
+		(at 167.64 102.87 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3121,7 +3133,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 143.51 87.63 90)
+		(at 161.29 87.63 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3129,7 +3141,7 @@
 		(dnp no)
 		(uuid "3a00b35c-11b6-4daf-a272-5c392279c9ad")
 		(property "Reference" "R17"
-			(at 145.288 86.614 90)
+			(at 163.068 86.614 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3138,7 +3150,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 136.906 87.122 90)
+			(at 154.686 87.122 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3147,7 +3159,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 143.764 86.614 90)
+			(at 161.544 86.614 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3156,7 +3168,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 143.51 87.63 0)
+			(at 161.29 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3165,7 +3177,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 143.51 87.63 0)
+			(at 161.29 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
