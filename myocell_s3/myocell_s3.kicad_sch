@@ -2017,6 +2017,16 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 101.6) (xy 189.23 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01b81bf8-8fa5-474b-9b1a-165dff6f6dd6")
+	)
+	(wire
+		(pts
 			(xy 114.3 39.37) (xy 114.3 43.18)
 		)
 		(stroke
@@ -2114,16 +2124,6 @@
 			(type default)
 		)
 		(uuid "1907cfb0-8d0b-473c-be4b-d3ed0ab1acdc")
-	)
-	(wire
-		(pts
-			(xy 160.02 101.6) (xy 189.23 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1ab46709-63f8-416c-9a3b-a897ee2ef830")
 	)
 	(wire
 		(pts
@@ -2624,6 +2624,16 @@
 			(type default)
 		)
 		(uuid "b9be6534-32f6-472d-af77-9dd583c94a1f")
+	)
+	(wire
+		(pts
+			(xy 151.13 101.6) (xy 151.13 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0ca3e01-d430-4f11-ab1a-2006befc7845")
 	)
 	(wire
 		(pts
@@ -6083,6 +6093,16 @@
 		(pin "pwdn" input
 			(at 138.43 67.31 180)
 			(uuid "da247c3e-f268-4c7c-8c63-be6994b0cea7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "bat_mon" input
+			(at 151.13 72.39 270)
+			(uuid "9e4e13cf-44e4-4636-b4d8-72fe602c96bd")
 			(effects
 				(font
 					(size 1.27 1.27)
