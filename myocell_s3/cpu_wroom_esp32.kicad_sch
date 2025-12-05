@@ -203,6 +203,15 @@
 					(hide yes)
 				)
 			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 			(property "ki_keywords" "LED diode"
 				(at 0 0 0)
 				(effects
@@ -1076,7 +1085,7 @@
 							)
 						)
 					)
-					(number ""
+					(number "41"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1449,8 +1458,12 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1526,8 +1539,7 @@
 				(pin power_in line
 					(at 0 0 270)
 					(length 0)
-					(hide yes)
-					(name "GND"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2476,7 +2488,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 46.99 44.45 0)
 			(effects
 				(font
@@ -2545,7 +2557,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 22.86 46.99 0)
 			(effects
 				(font
@@ -2611,7 +2623,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 85.09 111.76 0)
 			(effects
 				(font
@@ -2679,7 +2691,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Light emitting diode"
+			(at 31.75 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 31.75 97.79 0)
 			(effects
 				(font
@@ -2748,7 +2769,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 110.49 116.84 0)
 			(effects
 				(font
@@ -2798,7 +2819,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS645"
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS645Sx43SMTR92"
 			(at 31.75 34.29 0)
 			(effects
 				(font
@@ -2885,7 +2906,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 82.55 63.5 0)
 			(effects
 				(font
@@ -2951,7 +2972,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 116.84 139.7 0)
 			(effects
 				(font
@@ -3021,7 +3042,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 120.65 139.7 0)
 			(effects
 				(font
@@ -3087,7 +3108,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 102.87 116.84 0)
 			(effects
 				(font
@@ -3156,7 +3177,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 105.41 116.84 0)
 			(effects
 				(font
@@ -3225,7 +3246,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 39.37 73.66 0)
 			(effects
 				(font
@@ -3293,7 +3314,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 38.1 90.17 0)
 			(effects
 				(font
@@ -3362,7 +3383,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 106.68 31.75 0)
 			(effects
 				(font
@@ -3431,7 +3452,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 46.99 33.02 0)
 			(effects
 				(font
@@ -3481,7 +3502,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS645"
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS645Sx43SMTR92"
 			(at 39.37 63.5 0)
 			(effects
 				(font
@@ -3568,7 +3589,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 137.16 63.5 0)
 			(effects
 				(font
@@ -3635,7 +3656,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 31.75 104.14 0)
 			(effects
 				(font
@@ -3700,7 +3721,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 110.49 55.88 0)
 			(effects
 				(font
@@ -3766,7 +3787,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 119.38 31.75 0)
 			(effects
 				(font
@@ -3914,7 +3935,7 @@
 		(pin "20"
 			(uuid "0b5c6a1e-9cd2-4912-b02c-22b748986856")
 		)
-		(pin ""
+		(pin "41"
 			(uuid "0af23de0-cc81-4cd7-87e3-797cddff087e")
 		)
 		(pin "22"
@@ -4021,7 +4042,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 97.79 120.65 0)
 			(effects
 				(font
@@ -4087,7 +4108,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 97.79 116.84 0)
 			(effects
 				(font
@@ -4156,7 +4177,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 107.95 116.84 0)
 			(effects
 				(font
@@ -4225,7 +4246,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 46.99 49.53 0)
 			(effects
 				(font
@@ -4291,7 +4312,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 106.68 38.1 0)
 			(effects
 				(font
@@ -4357,7 +4378,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 27.94 77.47 0)
 			(effects
 				(font
@@ -4422,7 +4443,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 81.28 111.76 0)
 			(effects
 				(font
