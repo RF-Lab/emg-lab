@@ -1321,8 +1321,8 @@
 					)
 				)
 			)
-			(property "Value" ""
-				(at 0 0 0)
+			(property "Value" "MSS22D18"
+				(at 9.144 -0.508 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1354,14 +1354,6 @@
 						(size 1.27 1.27)
 					)
 					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
 				)
 			)
 			(symbol "MSS22D18_1_1"
@@ -5242,7 +5234,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "emg:MSS22D18"
 			(at 154.94 50.8 0)
 			(effects
 				(font

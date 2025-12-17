@@ -2385,6 +2385,16 @@
 	)
 	(wire
 		(pts
+			(xy 41.91 57.15) (xy 44.45 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68bb2999-309b-442b-a504-1d938b032aa5")
+	)
+	(wire
+		(pts
 			(xy 217.17 50.8) (xy 222.25 50.8)
 		)
 		(stroke
@@ -2392,16 +2402,6 @@
 			(type default)
 		)
 		(uuid "6e7e70cb-498f-4f9e-971b-3e3d8a5ba007")
-	)
-	(wire
-		(pts
-			(xy 41.91 57.15) (xy 45.72 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6fabcfa6-17d6-4018-b6cd-027a9a2725f8")
 	)
 	(wire
 		(pts
@@ -2732,6 +2732,72 @@
 			(type default)
 		)
 		(uuid "fd41673e-3ee0-44aa-a0de-98c245f1d025")
+	)
+	(symbol
+		(lib_id "power:+3.3VA")
+		(at 44.45 57.15 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "08dd54a4-2ed5-4d8c-b286-033ec310d595")
+		(property "Reference" "#PWR02"
+			(at 40.64 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3VA"
+			(at 47.498 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 44.45 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.45 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3VA\""
+			(at 44.45 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ac141a5f-753f-4e34-b92c-90e1120a8c3d")
+		)
+		(instances
+			(project "myocell_s3"
+				(path "/871ff10b-bde5-471c-b91a-de58aa271388"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:+3.3VA")
@@ -4039,73 +4105,6 @@
 			(project "myocell_s3"
 				(path "/871ff10b-bde5-471c-b91a-de58aa271388"
 					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GNDA")
-		(at 45.72 57.15 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a0502665-5264-487e-a041-992d66bd9b12")
-		(property "Reference" "#PWR02"
-			(at 52.07 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDA"
-			(at 49.53 57.1499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 45.72 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
-			(at 45.72 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2bdeb8bf-b125-4133-bf1d-c3668e467ba5")
-		)
-		(instances
-			(project "myocell_s3"
-				(path "/871ff10b-bde5-471c-b91a-de58aa271388"
-					(reference "#PWR02")
 					(unit 1)
 				)
 			)
