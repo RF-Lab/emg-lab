@@ -5,12 +5,12 @@
 	(uuid "871ff10b-bde5-471c-b91a-de58aa271388")
 	(paper "A4")
 	(title_block
-		(title "MYOCELL 8: EMG ADC board")
-		(date "2024-10-17")
+		(title "MYOCELL_S3: EMG ADC board")
+		(date "2025-12-24")
 		(rev "Rev 01")
 		(company "MIREA")
-		(comment 1 "2-8 ADC channels based on ADS1292(8)")
-		(comment 2 "CPU: ESP32 WROOM")
+		(comment 1 "4(8) ADC channels based on ADS1298")
+		(comment 2 "CPU: ESP32-S3 WROOM")
 	)
 	(lib_symbols
 		(symbol "Connector:USB_C_Receptacle_USB2.0_16P"
