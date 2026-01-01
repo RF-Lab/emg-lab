@@ -21,8 +21,13 @@
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(228, 26, 28)",
-          "signal": "V(Net-_R4-Pad2_) (сила)",
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(Net-_R4-Pad2_) (phase)",
+          "trace_type": 517
+        },
+        {
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(Net-_R4-Pad2_) (gain)",
           "trace_type": 521
         }
       ]
