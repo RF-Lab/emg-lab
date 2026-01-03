@@ -1006,6 +1006,16 @@
 		)
 		(uuid "2116db8e-003f-44ad-a840-183070d6dff0")
 	)
+	(text "Load"
+		(exclude_from_sim no)
+		(at 200.914 61.976 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3c58e24e-0b67-4da6-b7dc-7fa9bc58c879")
+	)
 	(junction
 		(at 168.91 34.29)
 		(diameter 0)
@@ -2513,7 +2523,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "dc=0 ampl=1 f=1k ac=1"
+		(property "Sim.Params" "dc=0 ampl=0.1 f=100 ac=1"
 			(at 24.384 53.086 0)
 			(effects
 				(font
@@ -3043,7 +3053,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1.6"
+		(property "Value" "3.2"
 			(at 146.05 84.9601 0)
 			(effects
 				(font
