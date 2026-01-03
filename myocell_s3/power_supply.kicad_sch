@@ -1707,6 +1707,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Fast charge current regulation can be scaled by placing\na programming resistor (RPROG) from the PROG input\nto VSS. The program resistor and the charge current\nare calculated using the following equation \n(MCP73831/2: https://static.chipdip.ru/lib/283/DOC012283193.pdf)\nI_{REG}=1000V/R_{PROG}"
+		(exclude_from_sim no)
+		(at 72.136 111.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "1f2a25fb-d5c2-42a9-99ae-aa4476a4769d")
+	)
 	(text "Analog 3.3v"
 		(exclude_from_sim no)
 		(at 113.03 135.89 0)
@@ -4518,7 +4528,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "2k"
 			(at 69.85 88.9 0)
 			(effects
 				(font
