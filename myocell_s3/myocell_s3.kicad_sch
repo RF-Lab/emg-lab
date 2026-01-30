@@ -2465,6 +2465,16 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 52.07) (xy 138.43 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d25f45d-edff-45da-9bff-6350c2fb13c4")
+	)
+	(wire
+		(pts
 			(xy 189.23 55.88) (xy 189.23 57.15)
 		)
 		(stroke
@@ -2602,16 +2612,6 @@
 			(type default)
 		)
 		(uuid "d20d3642-45c7-4c1f-9e40-303b4927b2da")
-	)
-	(wire
-		(pts
-			(xy 125.73 52.07) (xy 138.43 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d4f4f4da-c5a0-4726-b553-55a6f7ae4807")
 	)
 	(wire
 		(pts
@@ -4677,6 +4677,16 @@
 		(pin "bat_mon" input
 			(at 151.13 72.39 270)
 			(uuid "9e4e13cf-44e4-4636-b4d8-72fe602c96bd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "drdy" input
+			(at 138.43 52.07 180)
+			(uuid "4de61a59-9613-464f-b14c-da7824711fd1")
 			(effects
 				(font
 					(size 1.27 1.27)
