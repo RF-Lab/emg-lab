@@ -2733,6 +2733,26 @@
 		)
 		(uuid "fe717c1f-3290-45f1-b3b5-e1f1483d85a5")
 	)
+	(label "usb_d+"
+		(at 198.12 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "76f6c1fc-944d-4c3c-a4e3-454f41c0a225")
+	)
+	(label "usb_d-"
+		(at 198.12 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "943e9b1a-ff7b-4cf7-b768-1114562e659f")
+	)
 	(symbol
 		(lib_id "power:+3.3VA")
 		(at 45.72 46.99 270)
