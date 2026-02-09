@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "mg")(type "KiCad")(uri "${KIPRJMOD}/mg.pretty")(options "")(descr ""))
   (lib (name "emg")(type "KiCad")(uri "${KIPRJMOD}/emg.pretty")(options "")(descr ""))
+  (lib (name "Logo")(type "KiCad")(uri "${KIPRJMOD}/Logo.pretty/Logo.pretty")(options "")(descr ""))
 )

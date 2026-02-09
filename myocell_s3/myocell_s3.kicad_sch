@@ -2078,6 +2078,12 @@
 		(uuid "df3f54b7-d5e2-4bf1-af03-67179e377977")
 	)
 	(junction
+		(at 237.49 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "78a087dc-51e5-4600-b278-609b6fc1be9a")
+	)
+	(junction
 		(at 199.39 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2305,6 +2311,16 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 30.48) (xy 237.49 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35f46dab-3c57-41ad-9a0a-69d867376e5d")
+	)
+	(wire
+		(pts
 			(xy 43.18 57.15) (xy 49.53 57.15)
 		)
 		(stroke
@@ -2325,6 +2341,16 @@
 	)
 	(wire
 		(pts
+			(xy 245.11 30.48) (xy 245.11 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "553a315d-fdff-4e1e-9738-d6406001bd7e")
+	)
+	(wire
+		(pts
 			(xy 222.25 53.34) (xy 217.17 53.34)
 		)
 		(stroke
@@ -2342,6 +2368,16 @@
 			(type default)
 		)
 		(uuid "59548599-d016-4a53-891d-9e0036ae3935")
+	)
+	(wire
+		(pts
+			(xy 237.49 30.48) (xy 237.49 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6912c2cc-6650-4484-b787-dad3c2a7c8e3")
 	)
 	(wire
 		(pts
@@ -3210,6 +3246,73 @@
 			(project "myocell_s3"
 				(path "/871ff10b-bde5-471c-b91a-de58aa271388"
 					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 231.14 30.48 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "48c1403a-52a0-4de9-8405-2f594036c1f1")
+		(property "Reference" "#PWR06"
+			(at 224.79 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 227.33 30.4799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 231.14 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.14 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 231.14 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c857e8a3-73dc-4a72-a376-55e8ced0a56f")
+		)
+		(instances
+			(project "myocell_s3"
+				(path "/871ff10b-bde5-471c-b91a-de58aa271388"
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -4478,6 +4581,75 @@
 			(project "myocell_s3"
 				(path "/871ff10b-bde5-471c-b91a-de58aa271388"
 					(reference "C56")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 241.3 30.48 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fcae692e-1300-469d-89b4-b1dc672c7798")
+		(property "Reference" "R34"
+			(at 234.442 29.21 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100k"
+			(at 243.586 29.464 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 241.554 29.464 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 241.3 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 241.3 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2bce66e8-3775-405c-8530-b5eb09ef7a2b")
+		)
+		(pin "2"
+			(uuid "645f3428-98e2-471b-a5f2-042ff7c88703")
+		)
+		(instances
+			(project "myocell_s3"
+				(path "/871ff10b-bde5-471c-b91a-de58aa271388"
+					(reference "R34")
 					(unit 1)
 				)
 			)
