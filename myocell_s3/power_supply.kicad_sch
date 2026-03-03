@@ -1788,12 +1788,6 @@
 		(uuid "84506ede-d1b3-4865-8661-2f328b7dd34d")
 	)
 	(junction
-		(at 127 90.17)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8dab999f-4f1d-4ebf-869e-dd3fc6ae2679")
-	)
-	(junction
 		(at 87.63 143.51)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1892,16 +1886,6 @@
 			(type default)
 		)
 		(uuid "1973b499-38ea-4c21-951b-61701855eb89")
-	)
-	(wire
-		(pts
-			(xy 127 90.17) (xy 127 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1caee53e-2f65-44a1-b0a6-628f6771d0f3")
 	)
 	(wire
 		(pts
@@ -2215,16 +2199,6 @@
 	)
 	(wire
 		(pts
-			(xy 127 100.33) (xy 127 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "919fb490-32eb-41e4-baf9-e16c862aae46")
-	)
-	(wire
-		(pts
 			(xy 158.75 53.34) (xy 162.56 53.34)
 		)
 		(stroke
@@ -2335,16 +2309,6 @@
 	)
 	(wire
 		(pts
-			(xy 127 81.28) (xy 127 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b2a12f80-ddaf-4b01-8113-0cdf1efac67c")
-	)
-	(wire
-		(pts
 			(xy 162.56 53.34) (xy 162.56 62.23)
 		)
 		(stroke
@@ -2415,16 +2379,6 @@
 	)
 	(wire
 		(pts
-			(xy 127 88.9) (xy 127 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "da5c600e-f23a-4074-ae91-edd0f40b8a61")
-	)
-	(wire
-		(pts
 			(xy 85.09 87.63) (xy 85.09 91.44)
 		)
 		(stroke
@@ -2452,16 +2406,6 @@
 			(type default)
 		)
 		(uuid "f8d87cc8-0f9c-4188-9cc5-6022eeadd348")
-	)
-	(wire
-		(pts
-			(xy 148.59 90.17) (xy 127 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fb6cad6d-e8ba-497f-bf74-78df6b4bc76b")
 	)
 	(global_label "VIN"
 		(shape input)
@@ -2617,17 +2561,6 @@
 		)
 		(uuid "777b2026-912e-4097-b307-dfce6646b01a")
 	)
-	(hierarchical_label "BAT_MON"
-		(shape output)
-		(at 148.59 90.17 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a1ed9321-c295-4baf-a0a0-e917f2586daf")
-	)
 	(hierarchical_label "VUSB{slash}2.1A"
 		(shape input)
 		(at 50.8 62.23 180)
@@ -2649,87 +2582,6 @@
 			(justify left)
 		)
 		(uuid "ea309a5d-9786-4c98-8b16-a5be8516b6a9")
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 127 85.09 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "022d6a78-132a-497b-bdd2-2373cf73d377")
-		(property "Reference" "R28"
-			(at 121.92 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 121.92 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 125.984 84.836 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 127 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 127 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2c8c8358-63d5-44ab-9be8-1fac5a038e5f")
-		)
-		(pin "2"
-			(uuid "8cb03093-d24b-4073-b5d5-17504f9591be")
-		)
-		(instances
-			(project "myocell2"
-				(path "/871ff10b-bde5-471c-b91a-de58aa271388/e36bfe9c-db3d-4e13-afda-f7f295377ecb"
-					(reference "R28")
-					(unit 1)
-				)
-			)
-			(project "myocell2"
-				(path "/e513cd5e-988e-4071-93cd-c2c2c010dd7c/eca13eb4-a680-4456-b37c-b91993f488a3"
-					(reference "R?")
-					(unit 1)
-				)
-			)
-			(project "ADS1292EMG2x"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/46ace08d-eb32-49ac-809d-2e61e71dabf9"
-					(reference "R?")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Regulator_Linear:AP2112K-3.3")
@@ -3131,87 +2983,6 @@
 			(project "ADS1292EMG2x"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR?")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 127 95.25 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "36da26fa-ba74-4cfe-be3c-980d2fc178ae")
-		(property "Reference" "R29"
-			(at 121.92 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 121.92 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 125.984 94.996 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 127 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 127 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4663a78e-deaf-4b4a-b585-4a83de45aa15")
-		)
-		(pin "2"
-			(uuid "6ab1dcf6-eb1d-4b0a-a323-3114bde0d0bc")
-		)
-		(instances
-			(project "myocell2"
-				(path "/871ff10b-bde5-471c-b91a-de58aa271388/e36bfe9c-db3d-4e13-afda-f7f295377ecb"
-					(reference "R29")
-					(unit 1)
-				)
-			)
-			(project "myocell2"
-				(path "/e513cd5e-988e-4071-93cd-c2c2c010dd7c/eca13eb4-a680-4456-b37c-b91993f488a3"
-					(reference "R?")
-					(unit 1)
-				)
-			)
-			(project "ADS1292EMG2x"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/46ace08d-eb32-49ac-809d-2e61e71dabf9"
-					(reference "R?")
 					(unit 1)
 				)
 			)
@@ -3938,84 +3709,6 @@
 			(project "ADS1292EMG2x"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "C?")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 127 100.33 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "959049d5-8131-4d90-90cb-f74b567fc392")
-		(property "Reference" "#PWR073"
-			(at 127 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 124.46 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 127 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 127 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "56d644bf-7202-4625-8b9d-56e82d58dbea")
-		)
-		(instances
-			(project "myocell2"
-				(path "/871ff10b-bde5-471c-b91a-de58aa271388/e36bfe9c-db3d-4e13-afda-f7f295377ecb"
-					(reference "#PWR073")
-					(unit 1)
-				)
-			)
-			(project "myocell2"
-				(path "/e513cd5e-988e-4071-93cd-c2c2c010dd7c/eca13eb4-a680-4456-b37c-b91993f488a3"
-					(reference "#PWR?")
-					(unit 1)
-				)
-			)
-			(project "ADS1292EMG2x"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/46ace08d-eb32-49ac-809d-2e61e71dabf9"
-					(reference "#PWR?")
 					(unit 1)
 				)
 			)
