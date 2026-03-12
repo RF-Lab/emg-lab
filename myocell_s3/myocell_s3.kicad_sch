@@ -2141,6 +2141,16 @@
 	)
 	(wire
 		(pts
+			(xy 189.23 100.33) (xy 151.13 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "094eebe8-d7d5-43bd-86e7-632f2976bc82")
+	)
+	(wire
+		(pts
 			(xy 217.17 58.42) (xy 217.17 55.88)
 		)
 		(stroke
@@ -2358,6 +2368,16 @@
 			(type default)
 		)
 		(uuid "59548599-d016-4a53-891d-9e0036ae3935")
+	)
+	(wire
+		(pts
+			(xy 151.13 100.33) (xy 151.13 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60db2b8f-85f6-46e4-99f2-640ce756e7ac")
 	)
 	(wire
 		(pts
@@ -5200,9 +5220,9 @@
 				(justify left)
 			)
 		)
-		(pin "BAT_MON" output
-			(at 189.23 101.6 180)
-			(uuid "363a6ed5-8b34-4578-9d5b-31d6906e917c")
+		(pin "bat_mon" input
+			(at 189.23 100.33 180)
+			(uuid "05f5f5a1-f05d-43e0-b81c-140df3681b98")
 			(effects
 				(font
 					(size 1.27 1.27)
