@@ -21,7 +21,7 @@ ADC + CPU board for multiboard MYOCELL design. Includes [ADS1298(4)](https://sta
 ### Top+Silkscreen
 ![-](g_top.png)
 
-### Inner 1 (under top)
+### Inner 1 (under the top)
 ![-](g_in1.png)
 
 ### Inner 2
