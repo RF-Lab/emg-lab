@@ -7,8 +7,10 @@ ADC + CPU board for multiboard MYOCELL design. Includes [ADS1298(4)](https://sta
 
 * BOM: [Interactive BOM ()](https://htmlpreview.github.io/?https://github.com/RF-Lab/emg-lab/blob/main/myocell_s3/bom/ibom.html)
 
+### Top View
 ![-](3d.png)
 
+### Bottom View
 ![-](3d_back.png)
 
 ## Gerbers
