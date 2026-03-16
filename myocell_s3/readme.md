@@ -15,7 +15,11 @@ ADC + CPU board for multiboard MYOCELL design. Includes [ADS1298(4)](https://sta
 
 ## Gerbers
 
-![-](MYOCELL8-gerber-top.png)
+### Top+Silkscreen
+![-](g_top.png)
+
+### Bottom+Silkscreen
+![-](g_bottom.png)
 
 ![-](MYOCELL8-gerber-ins.png)
 
