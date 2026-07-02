@@ -1,0 +1,7 @@
+menu "MyoCell Configuration"
+    config AD1299_NUM_CH
+        int "ADC Channels number"
+        default 4
+        help
+            Number of ADC channels
+endmenu
