@@ -7,6 +7,7 @@
 ### Configure the project
 
 Для сборки микропрограммного обеспечения необходимо установить ESP-IDF [Инструкция](http://rf-lab.org/news/2020/04/04/esp-idf.html).
+
 Выбрать микроконтроллер
 ```
 idf.py set-target esp32s3
@@ -19,17 +20,17 @@ idf.py menuconfig
 
 Режим работы платы (Inference/RawData) можно поменять кнопкой PROG
 
-Также следует проверить слудующие настройки, и при необходимости установить их в соответсвии с примерами ниже:
+Также следует проверить следующие настройки, и при необходимости установить их в соответсвии с примерами ниже:
 
-![ClockConfig](https://drive.google.com/file/d/13Jj6xhyjLkEHcpFTvao6gjBG-8tc5EuW/view?usp=sharing)
+![ClockConfig](https://drive.google.com/uc?export=view&id=13Jj6xhyjLkEHcpFTvao6gjBG-8tc5EuW)
 
-![ClockConfig](https://drive.google.com/file/d/1onmu_HltZbPhOJho_KuUCeFca55VGnIC/view?usp=sharing)
+![ClockConfig](https://drive.google.com/uc?export=view&id=1onmu_HltZbPhOJho_KuUCeFca55VGnIC)
 
-![ClockConfig](https://drive.google.com/file/d/1ldYfmj5YujeDsoiEr0PYwSS34gvEyrvU/view?usp=sharing)
+![ClockConfig](https://drive.google.com/uc?export=view&id=1ldYfmj5YujeDsoiEr0PYwSS34gvEyrvU)
 
-![ClockConfig](https://drive.google.com/file/d/1ER45dmp5zdVaNlV5QWKfAEBfHGRzCfRw/view?usp=sharing)
+![ClockConfig](https://drive.google.com/uc?export=view&id=1ER45dmp5zdVaNlV5QWKfAEBfHGRzCfRw)
 
-![ClockConfig](https://drive.google.com/file/d/1HnuJOCX7_MDm4HRtw1LrAh7Iw4i-qFRK/view?usp=sharing)
+![ClockConfig](https://drive.google.com/uc?export=view&id=1HnuJOCX7_MDm4HRtw1LrAh7Iw4i-qFRK)
 
 ### Build and Flash
 
