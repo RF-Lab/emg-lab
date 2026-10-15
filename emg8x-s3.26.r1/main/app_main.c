@@ -314,7 +314,6 @@ static void wifi_init(void)
              * However these modes are deprecated and not advisable to be used. Incase your Access point
              * doesn't support WPA2, these mode can be enabled by commenting below line */
 	     .threshold.authmode = WIFI_AUTH_WPA2_PSK,
-
             .pmf_cfg = {
                 .capable = true,
                 .required = false
@@ -340,10 +339,6 @@ static void wifi_init(void)
     if (bits & WIFI_CONNECTED_BIT) {
         ESP_LOGI(TAG, "connected to ap SSID:%s password:%s",
                  CONFIG_WIFI_SSID, CONFIG_WIFI_PASSWORD ) ;
-#if CONFIG_EMG8X_BOARD_REV == 4
-        gpio_set_level( BOARD_LED1,     1 ) ;
-#endif
-
     } else if (bits & WIFI_FAIL_BIT) {
         ESP_LOGI(TAG, "Failed to connect to SSID:%s, password:%s",
                  CONFIG_WIFI_SSID, CONFIG_WIFI_PASSWORD ) ;
@@ -484,7 +479,6 @@ IRAM_ATTR static void drdy_gpio_isr_handler(void* arg)
     }
 
 }
-
 #endif
 
 //
@@ -547,7 +541,6 @@ void tcp_server_task( void* pvParameter )
             inet_ntoa_r(remote_addr.sin_addr.s_addr, addr_str, sizeof(addr_str) - 1) ;
             ESP_LOGI(TAG,"New incoming connection from: %s\n", addr_str ) ;
 
-
             while(1)
             {
                 if(xSemaphoreTake(drdy_thread_context.headTailMutex, portMAX_DELAY ) == pdTRUE) 
@@ -574,7 +567,10 @@ void tcp_server_task( void* pvParameter )
                         {
                             ESP_LOGE(TAG, "TCP_SERVER: can't take headTailMutex") ;
                         }
-
+                    }
+                    else
+                    {
+                        xSemaphoreGive(drdy_thread_context.headTailMutex) ;
                     }
                 }
                 else
@@ -586,12 +582,12 @@ void tcp_server_task( void* pvParameter )
 
                 // Notify or/and wait for data appears in the queue
                 //if ( xSemaphoreTake( drdy_thread_context.xDataQueueSemaphore, 0xFFFF ) != pdTRUE )
-                if (!ulTaskNotifyTake( pdFALSE, 0xffff )) // Wait or/and decrement count
-                {
-                    // still waiting for data from the ADC
-                    ESP_LOGE(TAG, "TCP_SERVER: There are no data from ADC for a long time...\n") ;
-                    continue ;
-                }
+                //if (!ulTaskNotifyTake( pdFALSE, 0xffff )) // Wait or/and decrement count
+                //{
+                //    // still waiting for data from the ADC
+                //    ESP_LOGE(TAG, "TCP_SERVER: There are no data from ADC for a long time...\n") ;
+                //    continue ;
+                //}
 
             }
 
@@ -1024,6 +1020,13 @@ IRAM_ATTR void spi_data_pump_task( void* pvParameter )
         if ((drdy_thread_context.spiReadBuffer[0]&0xf0)!=0xc0)
         {
             ESP_LOGE(TAG, "spi_data_pump_task: [%6d][%6d] 0xc0 not found!", (int)drdy_thread_context.blockCounter, (int)drdy_thread_context.sampleCount ) ;
+
+            ad1299_send_cmd8( spi_dev, AD1299_CMD_SDATAC ) ;
+            vTaskDelay( 100 / portTICK_PERIOD_MS ) ;
+
+            ad1299_send_cmd8( spi_dev, AD1299_CMD_RDATAC ) ;
+            vTaskDelay( 50 / portTICK_PERIOD_MS ) ;
+
             continue ;
         }
 
