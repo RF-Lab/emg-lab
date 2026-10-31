@@ -1,7 +1,0 @@
-.vscode/
-python_scripts/emg_venv/
-
-# ESP-IDF
-sdkconfig.old
-managed_components/
-build/
